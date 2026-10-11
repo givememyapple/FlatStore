@@ -4,6 +4,8 @@ minimalist gtk app for flatpack on swift
 # start
 <pre><code>swift run</code></pre>
 <table>
+
+# source of the idea
 <tr><th colspan="5">ideas that inspired</th></tr>
 <tr>
 <td>
