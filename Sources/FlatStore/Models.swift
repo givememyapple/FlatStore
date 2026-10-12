@@ -1,5 +1,19 @@
 import Foundation
 
+class BaseRecord {
+    let id: String
+    let createdAt: Foundation.Date
+
+    init(id: String = UUID().uuidString) {
+        self.id = id
+        self.createdAt = Foundation.Date()
+    }
+
+    func describe() -> String {
+        "Record \(id)"
+    }
+}
+
 class FlatApp {
     let appId: String
     let name: String
@@ -28,14 +42,17 @@ class FlatApp {
     }
 }
 
-class Session {
+class Session: BaseRecord {
     let login: String
-    let timeIn: Foundation.Date
     var timeOut: Foundation.Date?
 
     init(login: String) {
         self.login = login
-        self.timeIn = Foundation.Date()
+        super.init()
+    }
+
+    override func describe() -> String {
+        "Session of \(login)"
     }
 
     func toLine() -> String {
@@ -43,5 +60,9 @@ class Session {
         fmt.dateFormat = "dd.MM.yyyy HH:mm:ss"
         let out = timeOut.map { fmt.string(from: $0) } ?? fmt.string(from: Foundation.Date())
         return "| \(login) | \(fmt.string(from: timeIn)) | \(out) |"
+    }
+
+    var timeIn: Foundation.Date {
+        return createdAt
     }
 }
