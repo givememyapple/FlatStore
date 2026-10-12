@@ -5,6 +5,11 @@ minimalist gtk app for flatpack on swift
 <pre><code>swift run</code></pre>
 <table>
 
+# Screenshots
+<img src="https://github.com/givememyapple/FlatStore/blob/main/Screenshots/Screenshot%20From%202026-10-12%2019-15-59.png?raw=true"></img>
+<img src="https://github.com/givememyapple/FlatStore/blob/main/Screenshots/Screenshot%20From%202026-10-12%2019-16-19.png?raw=true"></img>
+<img src="https://github.com/givememyapple/FlatStore/blob/main/Screenshots/Screenshot%20From%202026-10-12%2019-16-32.png?raw=true"></img>
+
 # source of the idea
 <tr><th colspan="5">ideas that inspired</th></tr>
 <tr>
